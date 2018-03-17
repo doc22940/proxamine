@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Home | Proxamine</title>
+</head>
+<body>
+   <header>
+       <div class="logo">Proxamine</div>
+       <nav>
+           <ul>
+               <a href=""><li class="menu">Home</li></a>
+               <a href="#section2"><li class="menu">About</li></a>
+               <a href="#team"><li class="menu">Team</li></a>
+               <button class="btn" type="submit" onclick="open_srch()"><i class="fa fa-search"></i></button>
+           </ul>
+       </nav>
+   </header>
+   <div class="srchform" id="srch">
+      <a class="closebtn" onclick="close_srch()">
+          <i class="fa fa-times-circle"></i>
+      </a>
+      <form action="fix2.php" method="post" onsubmit="loader()">
+          <p>Hit Enter To Search</p> 
+          <input name ="item_s" type="text" class="srch_btn" placeholder="Search..." />  
+      </form>
+      <div id="loader"></div>
+   </div>
+    <div class="section1">
+        <div class="main">
+            <div class="title1">
+                We find the best in place product search for you.
+            </div>
+            <a href="#section2">
+                <button class="btn_search" >
+                    Explore <i class="fa fa-arrow-right"></i>
+                </button>
+            </a>
+        </div>
+    </div>
+    <div id="section2">
+        <div id="next">
+            <div class="title1">Welcome to Pro-<span class="dim">Examine</span></div>
+            <p>Proxamine is an online <span class="dim">Product Examiner</span>, which searches for products online and finds out the best one and the price most affordable to a user.</p>
+            <p>We at proxamine brings out the best of all products searched by most of users around the globe and presents to you. We are glad that you've searched it through us.</p>
+        </div>
+    </div>
+    <div class="team" id="team">
+        <span>Our Team</span>
+    </div>
+    <script>
+        /*function scrolll(){
+            window.scroll({
+              top: 2500, 
+              left: 0, 
+              behavior: 'smooth' 
+            });
+            // Scroll certain amounts from current position 
+            window.scrollBy({ 
+              top: 100, // could be negative value
+              left: 0, 
+              behavior: 'smooth' 
+            });
+            // Scroll to a certain element
+            document.getElementById('next').scrollIntoView({ 
+              behavior: 'smooth' 
+            });
+        }*/
+        function close_srch(){
+            document.getElementById('srch').style.left='100%';
+        }
+        function open_srch(){
+            document.getElementById('srch').style.left='0%';
+        }
+        function loader(){
+            document.getElementById('loader').style.display='block';
+        }
+    </script>
+</body>
+</html>
